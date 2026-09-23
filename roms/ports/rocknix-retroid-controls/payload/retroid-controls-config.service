@@ -1,0 +1,12 @@
+[Unit]
+Description=Keep Retroid per-game controls installed
+After=sway.service
+RequiresMountsFor=/storage
+
+[Service]
+Type=oneshot
+ExecStart=/storage/.config/retroid-controls/apply-config.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

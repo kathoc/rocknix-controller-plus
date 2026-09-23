@@ -1,0 +1,22 @@
+# yaml-language-server: $schema=/usr/share/inputplumber/schema/device_profile_v1.json
+version: 1
+kind: DeviceProfile
+name: Retroid Direct Touchscreen
+target_devices:
+  - touchscreen
+
+mapping:
+  - name: Screen touch motion
+    source_event:
+      touchscreen:
+        motion: {}
+    target_events:
+      - touchscreen:
+          motion: {}
+  - name: Screen touch contact
+    source_event:
+      touchscreen:
+        button: Touch
+    target_events:
+      - touchscreen:
+          button: Touch

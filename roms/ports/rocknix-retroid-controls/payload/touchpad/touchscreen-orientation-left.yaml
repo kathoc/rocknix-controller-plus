@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=/usr/share/inputplumber/schema/composite_device_v1.json
+version: 1
+kind: CompositeDevice
+name: Retroid Direct Touchscreen
+matches: []
+single_source: true
+source_devices:
+  - group: touchscreen
+    evdev:
+      name: generic ft5x06 (a0)
+      handler: event*
+    config:
+      touchscreen:
+        orientation: left
+options:
+  auto_manage: true
+  persist: true
+target_devices:
+  - touchscreen

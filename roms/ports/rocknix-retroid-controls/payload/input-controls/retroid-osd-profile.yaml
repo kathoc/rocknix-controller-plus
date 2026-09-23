@@ -1,0 +1,23 @@
+# Temporary profile active only while the OSD is visible.
+version: 1
+kind: DeviceProfile
+name: Retroid Controls OSD
+mapping:
+  - name: OSD Up
+    source_event: { gamepad: { button: DPadUp } }
+    target_events: [ { keyboard: KeyUp } ]
+  - name: OSD Down
+    source_event: { gamepad: { button: DPadDown } }
+    target_events: [ { keyboard: KeyDown } ]
+  - name: OSD Left
+    source_event: { gamepad: { button: DPadLeft } }
+    target_events: [ { keyboard: KeyLeft } ]
+  - name: OSD Right
+    source_event: { gamepad: { button: DPadRight } }
+    target_events: [ { keyboard: KeyRight } ]
+  - name: OSD Confirm
+    source_event: { gamepad: { button: East } }
+    target_events: [ { keyboard: KeyEnter } ]
+  - name: OSD Cancel
+    source_event: { gamepad: { button: South } }
+    target_events: [ { keyboard: KeyEsc } ]

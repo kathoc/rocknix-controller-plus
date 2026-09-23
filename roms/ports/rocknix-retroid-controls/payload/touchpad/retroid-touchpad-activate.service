@@ -1,0 +1,13 @@
+[Unit]
+Description=Activate Retroid touchscreen trackpad profile
+Requires=inputplumber.service
+After=inputplumber.service retroid-touchpad-config.service
+Before=sway.service
+
+[Service]
+Type=oneshot
+ExecStart=/storage/.config/touchpad/activate-trackpad.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

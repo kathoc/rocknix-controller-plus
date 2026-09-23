@@ -1,0 +1,13 @@
+[Unit]
+Description=Keep Retroid awake while charging
+After=systemd-logind.service
+RequiresMountsFor=/storage
+
+[Service]
+Type=simple
+ExecStart=/storage/.config/retroid-controls/charge-awake.sh
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target

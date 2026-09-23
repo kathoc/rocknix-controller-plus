@@ -1,0 +1,12 @@
+[Unit]
+Description=Install Retroid touchscreen trackpad InputPlumber config
+Before=inputplumber.service
+RequiresMountsFor=/storage
+
+[Service]
+Type=oneshot
+ExecStart=/storage/.config/touchpad/mount-trackpad-config.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

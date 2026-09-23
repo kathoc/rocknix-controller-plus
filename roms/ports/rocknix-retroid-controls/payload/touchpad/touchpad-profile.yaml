@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=/usr/share/inputplumber/schema/device_profile_v1.json
+version: 1
+kind: DeviceProfile
+name: Retroid Screen Trackpad
+target_devices:
+  - touchpad
+
+mapping:
+  - name: Screen touch motion to center touchpad
+    source_event:
+      touchscreen:
+        motion: {}
+    target_events:
+      - touchpad:
+          name: CenterPad
+          touch:
+            motion: {}
+  - name: Screen contact to center touchpad
+    source_event:
+      touchscreen:
+        button: Touch
+    target_events:
+      - touchpad:
+          name: CenterPad
+          touch:
+            button: Touch

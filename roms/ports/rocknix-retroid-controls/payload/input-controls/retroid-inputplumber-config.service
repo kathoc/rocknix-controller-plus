@@ -1,0 +1,11 @@
+[Unit]
+Description=Install Retroid InputPlumber capability map
+Before=inputplumber.service
+
+[Service]
+Type=oneshot
+ExecStart=/storage/.config/input-controls/mount-inputplumber-config.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
