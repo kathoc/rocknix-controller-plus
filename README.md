@@ -2,7 +2,7 @@
 
 Controller, touchscreen, mouse, and trackball enhancements for **ROCKNIX on the Retroid Pocket 5**.
 
-[日本語の説明はこちら / Japanese documentation](README-ja.txt)
+[日本語の説明はこちら / Japanese documentation](README-ja.md)
 
 > [!WARNING]
 > This package is currently intended only for the Retroid Pocket 5. The installer checks the device model and stops without making changes on unsupported hardware.
